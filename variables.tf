@@ -4,7 +4,7 @@ variable "instance_count" {
 
 variable "key_name" {
   description = "Private key name to use with instance"
-  default     = "terraform"
+  default     = "Packer"
 }
 
 variable "instance_type" {
@@ -13,8 +13,6 @@ variable "instance_type" {
 }
 
 variable "ami" {
-  description = "Base AMI to launch the instances"
-
-  # Bitnami NGINX AMI
+  description = "LIUNX to launch the instances"
   default = "ami-062f7200baf2fa504"
 }
