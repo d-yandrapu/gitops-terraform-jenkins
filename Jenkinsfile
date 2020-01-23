@@ -10,12 +10,14 @@ try {
   }
   
   stage('Set Terraform path') {
-def tfHome = tool name: 'terraform'
-env.PATH = "${tfHome}:${env.PATH}"
-}
+    node {
+    def tfHome = tool name: 'terraform'
+    env.PATH = "${tfHome}:${env.PATH}"
+    }
   ansiColor('xterm') {
           sh '/usr/local/bin/terraform --version'
         }
+  }
 
   // Run terraform init
   stage('init') {
