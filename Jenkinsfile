@@ -45,6 +45,7 @@ try {
         secretKeyVariable: 'AWS_SECRET_ACCESS_KEY'
       ]]) {
         ansiColor('xterm') {
+          sh '/usr/local/bin/terraform validate'
           sh '/usr/local/bin/terraform plan'
         }
       }
