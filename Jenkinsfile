@@ -15,7 +15,7 @@ try {
     env.PATH = "${tfHome}:${env.PATH}"
     }
   ansiColor('xterm') {
-          sh '/usr/local/bin/terraform --version'
+          sh 'terraform - version'
         }
   }
 
