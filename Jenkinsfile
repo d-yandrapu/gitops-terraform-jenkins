@@ -13,10 +13,10 @@ try {
     node {
     def tfHome = tool name: 'terraform'
     env.PATH = "${tfHome}:${env.PATH}"
-    }
-  ansiColor('xterm') {
-          sh '/usr/local/bin/terraform --version'
+    ansiColor('xterm') {
+          sh 'terraform --version'
         }
+    }
   }
 
   // Run terraform init
